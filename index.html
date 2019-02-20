@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Interactive App</title>
+  <title>CapacityEstimator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -18,19 +18,19 @@
     <h1>JavaScript for interactive apps!</h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-    <p>Enter your name:
+    <!-- <p>Enter your name:
       <input id="guest" type="text" value="Eden">
+    </p> -->
+
+    <p>Enter no of students:
+      <input id="numberofelements" type="number" value="students">
     </p>
 
-    <p>Enter first number:
-      <input id="firstNumber" type="number" value="7">
+    <p>Enter no of staff:
+      <input id="staffnumber" type="number" value="2">
     </p>
 
-    <p>Enter second number:
-      <input id="secondNumber" type="number" value="12">
-    </p>
-
-    <button id="clicker" class="btn btn-primary">Click me!</button>
+    <button id="clicker" class="btn btn-primary">People per course</button>
 
     <p id="result"></p>
 
@@ -49,11 +49,9 @@
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
+      const i = parseInt(document.getElementById('noofelements').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('secondNumber').value)
-      console.log('j=' + j)
+      const j = document.getElementById('noofstaff').value
       const ans = s + ', your sum is ' + add(i, j) + '.'
       document.getElementById('result').innerHTML = ans
     })
