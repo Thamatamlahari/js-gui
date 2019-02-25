@@ -18,16 +18,14 @@
     <h1>JavaScript for interactive apps!</h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-    <!-- <p>Enter your name:
-      <input id="guest" type="text" value="Eden">
-    </p> -->
+  
 
     <p>Enter no of students:
-      <input id="numberofelements" type="number" value="students">
+      <input id="numberofelements" type="number" value="3">
     </p>
 
     <p>Enter no of staff:
-      <input id="staffnumber" type="number" value="2">
+      <input id="staffnumber" type="constant" value="2">
     </p>
 
     <button id="clicker" class="btn btn-primary">People per course</button>
@@ -51,8 +49,9 @@
     document.getElementById('clicker').addEventListener('click', function () {
       const i = parseInt(document.getElementById('noofelements').value)
       console.log('i=' + i)
-      const j = document.getElementById('noofstaff').value
-      const ans = s + ', your sum is ' + add(i, j) + '.'
+      const j = parseInt(document.getElementById('noofstaff').value)
+      console.log('j=' + j)
+      const ans = 'your sum is ' + add(i, j)
       document.getElementById('result').innerHTML = ans
     })
 
