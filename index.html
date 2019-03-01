@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>CapacityEstimator</title>
+  <title>StudentEstimator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -20,15 +20,18 @@
 
   
 
-    <p>Enter no of students:
-      <input id="numberofelements" type="number" value="3">
+    <p>Enter students per course:
+      <input id="studentspercourse" type="number" value="3">
     </p>
 
-    <p>Enter no of staff:
-      <input id="staffnumber" type="number" value="2">
+    <p>Enter courses per term:
+      <input id="coursesperterm" type="number" value="2">
+    </p>
+    <p>Enter count of terms:
+      <input id="terms" type="number" value="2">
     </p>
 
-    <button id="clicker" class="btn btn-primary">People</button>
+    <button id="clicker" class="btn btn-primary">Total</button>
 
     <p id="result"></p>
 
@@ -39,19 +42,21 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function mul(x, y, z) {
+      return x * y *z
     }
-    console.log('Defined add=' + add)
+    console.log('Defined mul=' + mul)
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const i = parseInt(document.getElementById('numberofelements').value)
+      const i = parseInt(document.getElementById('studentspercourse').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('staffnuber').value)
+      const j = parseInt(document.getElementById('coursesperterm').value)
       console.log('j=' + j)
-      const ans = 'your sum is ' + add(i, j)
+      const k = parseInt(document.getElementById('terms').value)
+      console.log('k=' + k)
+      const ans = 'Total number of students is ' + mul(i, j, k)
       document.getElementById('result').innerHTML = ans
     })
 
